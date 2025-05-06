@@ -1,5 +1,5 @@
 import { LucideIcon } from "lucide-react";
-import React from "react";
+import React, { ReactNode } from "react";
 
 type StatDetail = {
   title: string;
@@ -10,7 +10,7 @@ type StatDetail = {
 
 type StatCardProps = {
   title: string;
-  primaryIcon: JSX.Element;
+  primaryIcon: ReactNode;
   details: StatDetail[];
   dateRange: string;
 };
