@@ -1,19 +1,18 @@
-
 "use client";
 
 import Header from "@/app/(components)/Header";
 import {
-    ExpenseByCategorySummary,
-    useGetExpensesByCategoryQuery,
+  ExpenseByCategorySummary,
+  useGetExpensesByCategoryQuery,
 } from "@/state/api";
 import { useMemo, useState } from "react";
 import {
-    Cell,
-    Legend,
-    Pie,
-    PieChart,
-    ResponsiveContainer,
-    Tooltip,
+  Cell,
+  Legend,
+  Pie,
+  PieChart,
+  ResponsiveContainer,
+  Tooltip,
 } from "recharts";
 
 type AggregatedDataItem = {
@@ -37,7 +36,7 @@ const Expenses = () => {
     isLoading,
     isError,
   } = useGetExpensesByCategoryQuery();
-  const expenses = useMemo(() => expensesData ?? [], [expensesData]);
+  const expenses = useMemo(() => (Array.isArray(expensesData) ? expensesData : []), [expensesData]);
 
   const parseDate = (dateString: string) => {
     const date = new Date(dateString);
