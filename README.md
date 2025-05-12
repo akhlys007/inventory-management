@@ -34,7 +34,7 @@ This project is a complete full stack inventory management dashboard built with 
 ##### Amplify
 - **Amplify**: For deploying the frontend
 #### Final AWS Architecture
-![AWS Solution Architecture](./server/assets/drawSQL-image-export-2025-05-06.png)
+![AWS Solution Architecture](./server/assets/Inventory%20Management.png)
 ## 🧩 Features
 
 - Fully responsive dashboard layout
